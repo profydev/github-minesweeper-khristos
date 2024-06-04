@@ -65,8 +65,7 @@ git push origin move-1-1
 
 ## Further Reading
 
-1. [How to write good commit messages](Further Reading
-How to write good commit messages)
+1. [How to write good commit messages](https://chris.beams.io/posts/git-commit/)
 2. [The .gitignore file](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
 
 
