@@ -110,3 +110,23 @@ You should see a form that asks for a title and a description. The title is agai
 The text "#1" is the number of the Pull Request and will turn into a link in the commit history as we'll see in a bit.
 
 To clean up you can delete the branch now. The good thing: you can recover it again. In theory, this should be possible indefinitely.
+
+## What just happened? A look at the commit history
+
+To get a better understanding of what just happened let's have a quick look at the commit history of the main branch.
+
+To open it navigate back to the main page of the repository.
+
+Then click on the commits.
+
+Now you can see the list of all commits on the main branch.
+
+As you can see we have two commits:
+
+1. the initial commit when the repository was created and
+2. the commit that we just created by merging the PR.
+
+Note that the title we entered when we created the PR became the commit message Move 1 ( #1 ).
+
+As promised, the #1 turned into a link to the Pull Request. This comes in very handy when you have to investigate the commit history of a larger project e.g. while tracking down a bug. Once you find the responsible commit you can look at the PR to understand the larger context. Assuming that the PR has a good description of course.
+
