@@ -85,4 +85,33 @@ In our case, the default title is "Clear A8". I'd rather call this PR "Move 1" a
 
 
 
+## Request a Review
+
+We created our first PR but can't merge it yet. We still need at least one approval from another developer.
+
+We don't have a real developer at our disposal but our bot teammate Tara will help us out. Either select her from the suggested reviewers or click the gear icon to open the dropdown menu.
+
+To send the review request you have to click outside the dropdown menu. Wait for a few seconds and Tara should leave a comment.
+
+Great, we were lucky and didn't hit a mine. We can see the current state of the board to plan our next move. But before we continue with the next move, we should merge the PR so the file changes are available in the main branch.
+
+
+## Merge the Pull Request
+
+We created our first PR and got it approved. Now it's time to merge it to the main branch.
+
+At the bottom of the page, you can see that the **"Squash and merge"** button turned green.
+
+You might wonder why the button says "Squash and merge" and not only "Merge". We'll see what that means later.
+
+For now, go ahead and click the button.
+
+You should see a form that asks for a title and a description. The title is again prefilled with the commit message (similar to the PR title). I again replace it with "Move 1".
+
+The text "#1" is the number of the Pull Request and will turn into a link in the commit history as we'll see in a bit.
+
+To clean up you can delete the branch now. The good thing: you can recover it again. In theory, this should be possible indefinitely.
+=======
+
+
 
