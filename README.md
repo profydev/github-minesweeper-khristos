@@ -84,6 +84,7 @@ For branches with a single commit, the PR title is prefilled with the commit mes
 In our case, the default title is "Clear A8". I'd rather call this PR "Move 1" and mention the field in the description.
 
 
+
 ## Request a Review
 
 We created our first PR but can't merge it yet. We still need at least one approval from another developer.
@@ -129,4 +130,8 @@ As you can see we have two commits:
 Note that the title we entered when we created the PR became the commit message Move 1 ( #1 ).
 
 As promised, the #1 turned into a link to the Pull Request. This comes in very handy when you have to investigate the commit history of a larger project e.g. while tracking down a bug. Once you find the responsible commit you can look at the PR to understand the larger context. Assuming that the PR has a good description of course.
+
+
+
+
 
