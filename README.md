@@ -55,3 +55,35 @@ Next, we stage the changes. In this case, we can simply stage all files.
 $ git add .
 $ git status
 ```
+
+Finally, let's commit and push the changes to the remote repository on GitHub.
+
+```sh
+git commit -m "Clear A8"
+git push origin move-1-1
+```
+
+## Further Reading
+
+1. [How to write good commit messages](Further Reading
+How to write good commit messages)
+2. [The .gitignore file](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
+
+
+## Create a Pull Request on GitHub
+
+Now that we pushed the branch to GitHub it's time to create our first Pull Request. There are two options:
+
+The first option is to click the link in the output of the **git push** command.
+
+The second option is to open the repository on GitHub. You'll see a button [Compare & pull request] to create a PR if you pushed any branches recently.
+
+Once you click either the link or the button, you should see a form to create the PR.
+
+For branches with a single commit, the PR title is prefilled with the commit message. For branches with more commits, the title is created using the name of the branch.
+
+In our case, the default title is "Clear A8". I'd rather call this PR "Move 1" and mention the field in the description.
+
+
+
+
