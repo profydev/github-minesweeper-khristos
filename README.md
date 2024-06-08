@@ -245,10 +245,10 @@ Finally, create the PR on GitHub. **This time try it on your own.**
 Here are the steps you need to open a PR:
 
 * open the repository on GitHub
-* click the "**Compare & pull request**" button (see screenshot below)
+* click the **"Compare & pull request"** button (see screenshot below)
 * enter the title "Move 2"
 * enter a description
-* click the "**Create pull request**" button
+* click the **"Create pull request"** button
 
 Once you created the PR head to the next section.
 
@@ -391,6 +391,7 @@ After this detour into Continuous Integration and GitHub Actions, we're ready to
 1. [CI/CD: Continuous Integration & Delivery](https://semaphoreci.com/cicd)
 2. [Learn more about GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 
+
 ## Merge the PR
 
 At this point, you should have a PR for our second move and the CI checks at the bottom should have turned green.
@@ -434,4 +435,156 @@ Great, we successfully finished the second round of GitHub Minesweeper. It's tim
 ## Further Reading
 
 1. [Different merge strategies and advantages of squash merge](https://blog.dnsimple.com/2019/01/two-years-of-squash-merge/)
+
+
+### Round 3: Being the reviewer
+## [Overview](https://profy.dev/project/github-minesweeper/overview-reviewer)
+
+Spoiler alert: After two successful rounds of Minesweeper it'll be "game over" soon.
+
+>*Don't worry. To practice Trunk-Based Development you can start a new game as often as you like. The goal is to build up muscle memory, right?*
+
+Until now, we created Pull Requests and our bot-friend Tara approved them. In this chapter, you will learn how the review process looks from the other side. This time you'll review a PR.
+
+Let's start by adding the next move.
+
+
+## The final move
+
+Before we edit the commands file **remember to sync our local repository with the remote one**.
+
+These are the Git commands you need to run on your local machine to sync the **main** branch:
+
+```sh
+git checkout main
+git pull origin main
+git log --oneline
+```
+
+The last line isn't really necessary. But why not double-check that everything looks fine?!
+
+Now it's time for the final move. Try the next steps for yourself.
+
+* create and checkout a new branch called **move-1-3**
+* add command "clear H7" to the array in the file **commands.json**
+* commit and push the changes
+* open a PR on GitHub
+* wait for the CI checks to finish and request a review.
+
+These are the Git commands you need:
+
+* Create and check out the new branch: **git checkout -b move-1-3**
+* Commit the file changes: **git commit -a -m "Clear H7"**
+* Push the changes: **git push origin move-1-3**
+
+You saw it coming. H7 wasn't a great choice. The game is over because we uncovered a mine.
+
+**Great news though: Tara created a PR that lets you start a new game.** That's what we'll do in the next section.
+
+But before we get there, let's close this PR to keep the repository tidy.
+
+Again, you can delete the branch since it's not needed anymore.
+
+Now it's time for you to become the reviewer.
+
+
+## Review & Approve a PR](https://profy.dev/project/github-minesweeper/review-and-approve)
+
+To recap: The game is over because we hit a mine. But Tara opened a PR that allows us to restart the game. We only need to merge it.
+
+Let's have a look at that PR (Restart Game). First, navigate to the Pull Request list.
+
+You should see a single PR (if you closed the previous one). You might see a green check instead of the red cross in the screenshot below. That's fine.
+
+Now open the PR.
+
+Tara shared the new empty board in the comment so you can select your first field to be cleared.
+
+As you can see at the bottom, all checks passed. But we can't merge the PR yet because it's missing an approving review.
+
+Since Tara opened the PR we can't request a review from her. After all, she's not allowed to approve her own PR. This time the review is our responsibility.
+
+Go ahead and open the **"Files changed"** tab.
+
+Now you should see a list of all the code changes like this:
+
+In a real project, you would thoroughly review the code. You would step through each file and add comments to the code where you think an improvement was required. Ideally, you'd check out the code on your local machine, run, and test it.
+
+To add comments you hover a line in one of the files. You'll see a **"+"** sign as you can see in the screenshot. Go ahead and give it a try.
+
+If you want to publish the comment directly you can click on the "Add single comment" button. The author of the PR is notified right away. This makes sense if you only have minor remarks.
+
+If you use the **"Start a review"** button the comment is not published directly but marked as "pending". You can add more comments and publish them together once you finish the review process. This is very handy when you have to review multiple files. Here an example:
+
+Imagine you go through a long list of code changes. You might not understand a part of the code immediately so you add a comment asking for clarification. You then continue reading the other code changes and suddenly you get the bigger context. Now you can go back and edit or delete the comment without the author of the PR being notified.
+
+So go ahead and click the **"Start a review"** button. You should see your comment embedded in the code now as shown in the screenshot below.
+
+Finally, click on the **"Finish your review"** button.
+
+We don't need to request changes but can directly approve the PR. You can enter a nice message if you want to make Tara happy. Then select the **"Approve"** option and click the button.
+
+You should then be redirected to the bottom of the PR page.
+
+Merge the PR as usual and you're ready to start a new game.
+
+
+## [Overview](https://profy.dev/project/github-minesweeper/quick-reference-overview)
+
+This is the end of the guided part of this course. We covered in more or less detail
+
+* The Trunk-Based Development Git workflow
+* Working with a team on a remote repository
+* Squash merging
+* Continuous Integration and GitHub Actions
+* The review process from the reviewer's perspective
+
+Now it's time for you to practice Trunk-Based Development on your own. No more hand-holding.
+
+**First, if you liked the course I would really appreciate it if you could share it with your friends or [mention it on Twitter](https://twitter.com/intent/tweet?url=https://profy.dev/project/github-minesweeper&text=This%20course%20by%20@j_kettmann%20helped%20me%20get%20comfortable%20with%20Git%20and%20GitHub).**
+
+**Second, I recommend playing a few more rounds of GitHub Minesweeper** to build up some muscle memory. You can find a cheat sheet with all the relevant commands on the next page.
+
+**Third, you can start using Continuous Integration and GitHub Actions as well as Trunk-Based Development in your own projects.** This will prepare you for the real dev world. It may even impress a hiring manager and help you get a job.
+
+You can get two guides to setting up GitHub Actions and branch protection in your own projects similar to the repo in this course. Just fill out the form below and I'll send them to you via email.
+
+
+## Cheat sheet
+
+Now it's time for you to practice Trunk-Based Development on your own. By playing a few more rounds of GitHub Minesweeper you have the chance to build up muscle memory. It might feel cumbersome at first. But believe me, it'll get better soon and it'll come in handy once you start working on a team of developers.
+
+Since you might not remember all the commands here is a quick overview.
+
+## GitHub Minesweeper rules
+
+**Goal of the game:** flag all mines
+
+Available commands to add to **commands.json**:
+
+* **clear [field]**: e.g. "clear A9", clears the selected field
+* **flag [field]**: e.g. "flag A9", flags the selected field. Should be used when you think this field is a mine.
+* **unflag [field]**: e.g. "unflag A9", removes a flag from the selected field. Should be used if you mistakenly flagged a field.
+* **end**: once you flagged all mines you can end the game with this command. Tara will reveal the board and create a new PR to restart the game.
+
+## Trunk-Based Development
+
+1. Sync the local **main** branch.
+2. Check out a new branch from **main**.
+3. Add new commands to **commands.json**.
+4. Commit and push the changes.
+5. Open a Pull Request.
+6. Wait for the CI checks to pass.
+7. Request a review by Tara.
+8. Merge the PR if it was approved. If you hit a mine, restart the game by approving and merging the PR created by Tara.
+
+## Git Cheat Sheet
+
+Here is a list of Git commands in the order you need them for Trunk-Based Development:
+
+1. Check out the main branch: **git checkout main**
+2. Sync the local and remote main branches: **git pull origin main**
+3. Create and check out a new branch: **git checkout -b YOUR_BRANCH_NAME**
+4. Commit all file changes: **git commit -a -m "YOUR_COMMIT_MESSAGE"**
+5. Push the changes to the remote repo on GitHub: **git push origin YOUR_BRANCH_NAME**
 
