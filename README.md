@@ -488,7 +488,7 @@ Again, you can delete the branch since it's not needed anymore.
 Now it's time for you to become the reviewer.
 
 
-## Review & Approve a PR](https://profy.dev/project/github-minesweeper/review-and-approve)
+## [Review & Approve a PR](https://profy.dev/project/github-minesweeper/review-and-approve)
 
 To recap: The game is over because we hit a mine. But Tara opened a PR that allows us to restart the game. We only need to merge it.
 
